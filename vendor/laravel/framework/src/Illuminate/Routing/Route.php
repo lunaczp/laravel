@@ -131,7 +131,7 @@ class Route {
 
 			if ($this->customDispatcherIsBound())
 			{
-				return $this->runWithCustomDispatcher($request);
+				return $this->runWithCustomDispatcher($request);//lux run route
 			}
 
 			return $this->runController($request);
@@ -201,7 +201,7 @@ class Route {
 
 		$dispatcher = $this->container->make('illuminate.route.dispatcher');
 
-		return $dispatcher->dispatch($this, $request, $class, $method);
+		return $dispatcher->dispatch($this, $request, $class, $method);//lux dispatcher
 	}
 
 	/**

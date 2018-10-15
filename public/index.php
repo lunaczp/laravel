@@ -50,8 +50,8 @@ $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
 
 $response = $kernel->handle(
 	$request = Illuminate\Http\Request::capture()
-);
+);//lux call controller
 
-$response->send();
+$response->send();//lux send response
 
-$kernel->terminate($request, $response);
+$kernel->terminate($request, $response);//lux terminate

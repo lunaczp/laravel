@@ -105,7 +105,7 @@ class ControllerDispatcher {
 	                ->then(function($request) use ($instance, $route, $method)
 					{
 						return $this->call($instance, $route, $method);
-					});
+					});//lux call controller
 	}
 
 	/**

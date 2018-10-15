@@ -700,7 +700,7 @@ class Router implements RegistrarContract {
 								$request,
 								$route->run($request)
 							);
-						});
+						});//lux run route
 	}
 
 	/**

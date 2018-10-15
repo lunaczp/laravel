@@ -98,7 +98,7 @@ class Pipeline implements PipelineContract {
 
 		return call_user_func(
 			array_reduce($pipes, $this->getSlice(), $firstSlice), $this->passable
-		);
+		);//lux pipeline 最终的调用
 	}
 
 	/**

@@ -81,7 +81,7 @@ class Kernel implements KernelContract {
 	{
 		try
 		{
-			$response = $this->sendRequestThroughRouter($request);
+			$response = $this->sendRequestThroughRouter($request);//lux call controller etc
 		}
 		catch (Exception $e)
 		{
@@ -112,7 +112,7 @@ class Kernel implements KernelContract {
 		return (new Pipeline($this->app))
 		            ->send($request)
 		            ->through($this->middleware)
-		            ->then($this->dispatchToRouter());
+		            ->then($this->dispatchToRouter());//lux 请求返回
 	}
 
 	/**
@@ -211,7 +211,7 @@ class Kernel implements KernelContract {
 		{
 			$this->app->instance('request', $request);
 
-			return $this->router->dispatch($request);
+			return $this->router->dispatch($request);//lux 路由
 		};
 	}
 
