@@ -112,7 +112,7 @@ class Kernel implements KernelContract {
 		return (new Pipeline($this->app))
 		            ->send($request)
 		            ->through($this->middleware)
-		            ->then($this->dispatchToRouter());//lux 请求返回
+		            ->then($this->dispatchToRouter());//lux 分发请求，并返回response
 	}
 
 	/**

@@ -119,7 +119,7 @@ class Route {
 	 * @return mixed
 	 */
 	public function run(Request $request)
-	{
+	{//lux 路由，通过指定dispatcher分发
 		$this->container = $this->container ?: new Container;
 
 		try
@@ -201,7 +201,7 @@ class Route {
 
 		$dispatcher = $this->container->make('illuminate.route.dispatcher');
 
-		return $dispatcher->dispatch($this, $request, $class, $method);//lux dispatcher
+		return $dispatcher->dispatch($this, $request, $class, $method);//lux 使用指定dispatcher分发到具体的controller
 	}
 
 	/**

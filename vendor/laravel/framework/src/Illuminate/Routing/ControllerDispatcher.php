@@ -47,15 +47,15 @@ class ControllerDispatcher {
 	 * @return mixed
 	 */
 	public function dispatch(Route $route, Request $request, $controller, $method)
-	{
+	{//lux 路由分发
 		// First we will make an instance of this controller via the IoC container instance
 		// so that we can call the methods on it. We will also apply any "after" filters
 		// to the route so that they will be run by the routers after this processing.
-		$instance = $this->makeController($controller);
+		$instance = $this->makeController($controller);//lux 实例化Controller
 
 		$this->assignAfter($instance, $route, $request, $method);
 
-		$response = $this->before($instance, $route, $request, $method);
+		$response = $this->before($instance, $route, $request, $method);//lux before
 
 		// If no before filters returned a response we'll call the method on the controller
 		// to get the response to be returned to the router. We will then return it back
@@ -80,7 +80,7 @@ class ControllerDispatcher {
 	{
 		Controller::setRouter($this->router);
 
-		return $this->container->make($controller);
+		return $this->container->make($controller);//lux make controller
 	}
 
 	/**
