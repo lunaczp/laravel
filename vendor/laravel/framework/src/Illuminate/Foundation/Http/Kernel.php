@@ -37,7 +37,7 @@ class Kernel implements KernelContract {
 		'Illuminate\Foundation\Bootstrap\RegisterFacades',
 		'Illuminate\Foundation\Bootstrap\RegisterProviders',
 		'Illuminate\Foundation\Bootstrap\BootProviders',
-	];
+	];//lux basic bootstrapper
 
 	/**
 	 * The application's middleware stack.

@@ -491,7 +491,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 			$provider = $this->resolveProviderClass($provider);
 		}
 
-		$provider->register();
+		$provider->register();//lux 调用provider 的 register方法
 
 		// Once we have registered the service we will iterate through the options
 		// and set each of them on the application so they will be available on

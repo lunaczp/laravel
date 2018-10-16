@@ -12,7 +12,7 @@ class RegisterProviders {
 	 */
 	public function bootstrap(Application $app)
 	{
-		$app->registerConfiguredProviders();
+		$app->registerConfiguredProviders();//lux 注册app内配置的provider
 	}
 
 }
