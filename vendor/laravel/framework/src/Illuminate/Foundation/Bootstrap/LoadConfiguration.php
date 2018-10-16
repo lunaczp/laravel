@@ -35,7 +35,7 @@ class LoadConfiguration {
 		// options available to the developer for use in various parts of this app.
 		if ( ! isset($loadedFromCache))
 		{
-			$this->loadConfigurationFiles($app, $config);
+			$this->loadConfigurationFiles($app, $config);//lux 加载配置
 		}
 
 		date_default_timezone_set($config['app.timezone']);
